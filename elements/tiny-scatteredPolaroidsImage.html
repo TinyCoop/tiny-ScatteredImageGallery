@@ -1,0 +1,25 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+
+<polymer-element name="tiny-scatteredPolaroidsImage" attributes="imagelink imagesource imagealt imagecaption">
+    <template>
+        <figure>
+            <a href="{{imagelink}}" class="photostack-img">
+                <img src="{{imagesource}}" alt="{{imagealt}}" />
+            </a>
+            <figcaption>
+                <h2 class="photostack-title">{{imagecaption}}</h2>
+            </figcaption>
+        </figure>
+    </template>
+    <script>
+        Polymer('tiny-scatteredPolaroidsImage', {
+            //Idea here is to provide a default image set
+            //That still looks good but lets the user
+            //know that they need to add the attributes
+            imagelink: 'null',
+            imagesource: 'sample',
+            imagealt: 'sample',
+            imagecaption: 'sample'
+        });
+    </script>
+</polymer-element>
